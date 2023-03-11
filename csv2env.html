@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>csv2env</title>
+</head>
+
+<body>
+    <h1>csv2env</h1>
+    <p>csv2env converts CSV data into text like environment variables.</p>
+    <p>
+        <textarea id="csv" rows="30" cols="1" style="width: 80%; height: 100%;">
+user, password
+potato, password1
+shiromo, password2
+abbey, password3</textarea>
+    </p>
+    <script src="csv2env.js"></script>
+
+    <button id="button" onclick='let data = csv2env(document.getElementById("csv").value);document.getElementById("csv").value = data ?? "Invalid csv format!";'>convert</button>
+</body>
+
+</html>
